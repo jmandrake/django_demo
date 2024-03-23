@@ -33,5 +33,6 @@ Reference: https://www.youtube.com/watch?v=EuBQU_miReM
 - add movie
 - delete movie
 
-
-
+## Extras
+- add description and actors fields to the movies table
+- test edit movies using admin UI

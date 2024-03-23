@@ -17,16 +17,24 @@ def detail(request, id):
     movie = Movie.objects.get(pk=id)
     return render(request, 'movies/detail.html', {'movie': movie})
 
+
 # add movie view
 def add_movie(request):
     if request.method == 'POST':
         title = request.POST.get('title')
         director = request.POST.get('director')
         year = request.POST.get('year')
+        description = request.POST.get('description')
+        actors = request.POST.get('actors')
         if title and director and year:
-            Movie.objects.create(title=title, director=director, year=year)
+            Movie.objects.create(title=title, 
+                                 director=director, 
+                                 year=year, 
+                                 description=description, 
+                                 actors=actors)
             return HttpResponseRedirect('/movies')
     return render(request, 'movies/add_movie.html')
+
 
 def delete_movie(request, id):
     try:
