@@ -20,17 +20,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-o#+xf=_!mzsih4pxazy5pm1q1@ce*kam(#)+l0-q3s81qu%0^('
+SECRET_KEY = '{secrets.SECRET_KEY}'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 
-# Application definition
+# Application definition: INSTALLED_APPS is a list of strings that lists all the applications that are activated in this Django instance. These applications include both the apps that come with Django and the ones you create. The apps that come with Django are listed in the django.contrib namespace. The apps you create are listed in the namespace of your project. The order of the apps in the list matters. Django will look for templates in the order of the apps in this list. If two apps have a template with the same name, Django will use the one from the app that comes first in the list. The apps in the list are activated by default. You can deactivate an app by commenting out the line that lists the app in this list. You can also deactivate an app by removing the app from this
 
 INSTALLED_APPS = [
+    'movies',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
