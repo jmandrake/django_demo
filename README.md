@@ -45,15 +45,18 @@ Reference: https://www.youtube.com/watch?v=EuBQU_miReM
 - export DJANGO_SETTINGS_MODULE=movies.settings
 
 - pytest (run pytest from the project root)
-> $ pytest  
+> $ pytest -v
 > \=========== test session starts ======================  
-> platform win32 -- Python 3.9.0, pytest-8.1.1, pluggy-1.4.0  
+> platform win32 -- Python 3.9.0, pytest-8.1.1, pluggy-1.4.0 -- c:\\projects\\django\\django\_demo\\venv\\scripts\\python.exe  
+> cachedir: .pytest\_cache  
 > django: version: 4.2.11, settings: movies.settings (from env)  
 > rootdir: C:\\projects\\django\\django\_demo  
 > plugins: cov-4.1.0, django-4.8.0  
 > collected 3 items
 > 
-> movies\\views\_test.py ... \[100%\]
+> movies/views\_test.py::test\_add\_movie\_view PASSED \[ 33%\]  
+> movies/views\_test.py::test\_django\_version PASSED \[ 66%\]  
+> movies/views\_test.py::test\_raise\_error PASSED
 > 
 > \============== 3 passed in 0.17s ====================
 
