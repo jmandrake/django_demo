@@ -38,7 +38,7 @@ Reference: https://www.youtube.com/watch?v=EuBQU_miReM
 - test edit movies using admin UI
 
 ## pytest: make sure you're in the venv
-- pip install pytest
+- pip install pytest 
 - pip install pytest-django
 - pip install pytest-cov
 - create movies/views_test.py and add your tests
@@ -46,6 +46,7 @@ Reference: https://www.youtube.com/watch?v=EuBQU_miReM
 
 - pytest (run pytest from the project root)
 > $ pytest -v
+> 
 > \=========== test session starts ======================  
 > platform win32 -- Python 3.9.0, pytest-8.1.1, pluggy-1.4.0 -- c:\\projects\\django\\django\_demo\\venv\\scripts\\python.exe  
 > cachedir: .pytest\_cache  
@@ -62,7 +63,8 @@ Reference: https://www.youtube.com/watch?v=EuBQU_miReM
 
 
 - pytest --cov=movies (test coverage report)
-> $ pytest --cov=movies  
+> $ pytest --cov=movies
+> 
 > \============== test session starts ===================  
 > platform win32 -- Python 3.9.0, pytest-8.1.1, pluggy-1.4.0  
 > django: version: 4.2.11, settings: movies.settings (from env)  
